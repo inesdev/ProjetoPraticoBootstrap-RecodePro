@@ -3,29 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <link rel='stylesheet' type='text/css' href='css/styles.css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="js/script.js"></script>
         <title> Full Stack Eletro </title>
     </head>
     <body>  
-       
-    <nav class="menu">
-        <a href="index.php"><img src="./imagens/logo.jpg" width="100px" height="100px" alt="Full Stack Eletro"></a>
-        <a href="produtos.php">Produtos</a>
-        <a href="loja.php">Nossas Lojas</a>
-        <a href="contato.php">Contato</a>
-    </nav>
+      
+    <!-- Menu -->
+    <?php include_once('menu.html')?>
 
-        <main>
-            <h2>Seja bem-vindo(a)!</h2>
+        <main class="container-fluid">
+            <h2 class="text-info">Seja bem-vindo(a)!</h2>
     
-            <p class="textoinicial">Em nossa loja temos ótimos produtos e estamos com <b>promoções imperdíveis</b>, aproveite!</p>
+            <p class="text-info">Em nossa loja temos ótimos produtos e estamos com <b>promoções imperdíveis</b>, aproveite!</p>
         </main>
         
-        <footer id="formas-pagamento" class="rodape">
-            <h2>
+        <footer class="rodape">
+            <p class="nav justify-content-center">
                 Formas de Pagamento
-            </h2>
+            </p>
+            <div class="nav justify-content-center">
             <img src="./imagens/pagamento.jpg" alt="Formas de Pagamento">
+            </div>
         </footer>
     </body>
 </html>

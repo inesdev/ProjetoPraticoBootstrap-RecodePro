@@ -3,50 +3,56 @@
     <head>
         <meta charset="UTF-8">
         <link rel='stylesheet' type='text/css' href='css/styles.css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <title>Nossas Lojas - Full Stack Eletro</title>
     </head>
     <body>
         
-    <nav class="menu">
-        <a href="index.php"><img src="./imagens/logo.jpg" width="100px" height="100px" alt="Full Stack Eletro"></a>
-        <a href="produtos.php">Produtos</a>
-        <a href="loja.php">Nossas Lojas</a>
-        <a href="contato.php">Contato</a>
-    </nav>
+     <!-- Menu -->
+     <?php include_once('menu.html')?>
 
-        <h2>
+        <main class="container-fluid">
+        <h2 class="text-info">
             Nossas Lojas
         </h2>
         <hr>
         
-        <div class="lojas">
-            <div class="loja">
-                <h3>São Paulo</h3>
-                <p>Avenida das Nações, 505</p>
-                <p>Centro</p>
-                <p>Telefone: (11)3456-3000</p>
+        <div class="container-fluid">
+        
+            <div class="row container-fluid">
+                <div class="col nav text-info">São Paulo</div>
+                <div class="col nav text-info">Rio de Janeiro</div>                               
+                <div class="col nav text-info">Belo Horizonte</div>                                                     
             </div>
 
-            <div class="loja">
-                <h3>Rio de Janeiro</h3>
-                <p>Avenida Vargas, 405</p>
-                <p>Centro</p>
-                <p>Telefone:(21)3425-3000</p>
+            <div class="row container-fluid">
+                <div class="col nav text-info">Avenida das Nações, 505</div>
+                <div class="col nav text-info">Avenida Vargas, 405</div>
+                <div class="col nav text-info">Avenida Prudente, 305</div>                                             
+                                                
             </div>
 
-            <div class="loja">
-                <h3>Belo Horizonte</h3>
-                <p>Avenida Prudente, 305</p>
-                <p>Centro</p>
-                <p>(31)3689-3000</p>
+            <div class="row container-fluid">
+                <div class="col nav text-info">Centro</div>
+                <div class="col nav text-info">Centro</div>
+                <div class="col nav text-info">Centro</div>     
+            </div>
+
+            <div class="row container-fluid">
+                <div class="col nav text-info">Telefone: (21)3425-3000</div>
+                <div class="col nav text-info">Telefone: (31)3689-3000</div>
+                <div class="col nav text-info">Telefone: (31)3689-3000</div>
             </div>
         </div>
+        </main>
         
-        <footer id="formas-pagamento" class="rodape">
-            <h2>
+        <footer class="rodape">
+            <p class="nav justify-content-center">
                 Formas de Pagamento
-            </h2>
+            </p>
+            <div class="nav justify-content-center">
             <img src="./imagens/pagamento.jpg" alt="Formas de Pagamento">
+            </div>
         </footer>
     </body>
 </html>

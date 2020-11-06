@@ -3,68 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <title>Contato - Full Stack Eletro</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel='stylesheet' type='text/css' href='css/styles.css'>
     </head>
 
-    <body style="text-align:center">
+    <body>
         
-    <nav class="menu">
-        <a href="index.php"><img src="./imagens/logo.jpg" width="100px" height="100px" alt="Full Stack Eletro"></a>
-        <a href="produtos.php">Produtos</a>
-        <a href="loja.php">Nossas Lojas</a>
-        <a href="contato.php">Contato</a>
-    </nav>
+     <!-- Menu -->
+     <?php include_once('menu.html')?>
 
-        <h2>
+        <main class="container-fluid">
+        <h2 class="text-info">
             Contato
         </h2>
         <hr>
         
-        <div class="contatos">
-                <div class="contato">
-                <p>E-mail: contato@fullstackeletro.com.br</p>
-            </div>
+        <div class="container-fluid">
+                <div class="nav text-info">
+                    E-mail: contato@fullstackeletro.com.br | Whatsapp: (11)99506-3569
+                </div> 
+        </div> 
 
-            <div class="contato">
-                <p>Whatsapp: (11)99506-3569</p>
-            </div>     
-        </div>   
+        <br>
 
-        <h3> Peça o seu produto: </h3>
+        <div class="container-fluid">
+        <h3 class="nav text-info"> Peça o seu produto: </h3><br>    
+        </div>
 
         <!-- Formulário -->
-
+        
         <form method='post' name='pedidos'> 
-            Nome:<br> 
-            <input type="text" name="nome" style="width:500px"><br> 
+            <div class="container-fluid">
+                <label class="nav text-info"> 
+                Nome:
+                </label><br> 
+                <input class= "form-control" type="text" name="nome" style="width:500px"><br> 
 
-            Endereço:<br> 
-            <input type="text" name="endereco" style="width:500px"><br> 
+                <label class="nav text-info">Endereço:</label><br> 
+                <input class= "form-control" type="text" name="endereco" style="width:500px"><br> 
+                
+                <label class="nav text-info">Telefone:</label><br> 
+                <input class= "form-control" type="number" name="telefone" style="width:500px"><br> 
             
-            Telefone:<br> 
-            <input type="number" name="telefone" style="width:500px"><br> 
-           
-            Produto:<br> 
-            <select name="produto" style="width:500px">
-                <option value=""></option>
-                <option value="Panela">Panela Eletrica de Arroz Mondial</option>
-                <option value="Panela 2">Panela Eletrica de Arroz Mondial PE-10 700W</option>
-                <option value="Liquidificador">Liquidificador Mondial com Filtro Turbo L900FB com 5 Velocidades</option>
-                <option value="Liquidificador 2">Liquidificador Mondial Turbo L-1000 RI com 12 Velocidades</option>
-                <option value="Sanduicheira">Sanduicheira e Grill Britania Crome 2P</option>
-                <option value="Sanduicheira 2">Sanduicheira Britania Bello Pane</option>
-                <option value="Ventilador">Ventilador de Mesa Mondial - 3 Velocidades</option>
-                <option value="Ventilador 2">Ventilador de Coluna Malory - 3 Velocidades</option>
-                <option value="Aspirador">Aspirador de Po Britania Faciclean</option>
-                <option value="Aspirador 2">Aspirador de Po Vertical Philco</option>
-                <option value="Centrifuga">Centrifuga de Roupas Britania 12Kg</option>
-                <option value="Centrifuga 2">Centrifuga de Roupas Mueller Super 5 kg</option>
-            </select><br>  
+                <label class="nav text-info">Produto:</label><br> 
+                <select class= "form-control" name="produto" style="width:500px">
+                    <option value=""></option>
+                    <option value="Panela">Panela Eletrica de Arroz Mondial</option>
+                    <option value="Panela 2">Panela Eletrica de Arroz Mondial PE-10 700W</option>
+                    <option value="Liquidificador">Liquidificador Mondial com Filtro Turbo L900FB com 5 Velocidades</option>
+                    <option value="Liquidificador 2">Liquidificador Mondial Turbo L-1000 RI com 12 Velocidades</option>
+                    <option value="Sanduicheira">Sanduicheira e Grill Britania Crome 2P</option>
+                    <option value="Sanduicheira 2">Sanduicheira Britania Bello Pane</option>
+                    <option value="Ventilador">Ventilador de Mesa Mondial - 3 Velocidades</option>
+                    <option value="Ventilador 2">Ventilador de Coluna Malory - 3 Velocidades</option>
+                    <option value="Aspirador">Aspirador de Po Britania Faciclean</option>
+                    <option value="Aspirador 2">Aspirador de Po Vertical Philco</option>
+                    <option value="Centrifuga">Centrifuga de Roupas Britania 12Kg</option>
+                    <option value="Centrifuga 2">Centrifuga de Roupas Mueller Super 5 kg</option>
+                </select><br>  
 
-            Quantidade:<br> 
-            <input type="number" name="quantidade" style="width:500px"><br><br>
-            <input type="submit" name="submit" value="Enviar" style="width:500px"><br><br>
+                <label class="nav text-info">Quantidade:</label><br> 
+                <input class= "form-control"type="number" name="quantidade" style="width:500px"><br><br>
+                <button class="btn btn-primary" type="submit" name="submit" value="Enviar" style="width:500px">Enviar</button><br><br>
+            </div>
         </form> 
+        
 
         <!-- Fim Formulário -->
 
@@ -101,13 +104,15 @@
             }             
         }
     ?> 
-
+    </main>
     <br>
-        <footer id="formas-pagamento">
-            <h2>
+        <footer>
+            <p class="nav justify-content-center">
                 Formas de Pagamento
-            </h2>
+            </p>
+            <div class="nav justify-content-center">
             <img src="./imagens/pagamento.jpg" alt="Formas de Pagamento">
+            </div>
         </footer>
     </body>
 </html>

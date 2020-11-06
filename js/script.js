@@ -10,7 +10,7 @@ function mostrar_categoria(categoria) {
     }
 }
 
-let mostrar_todos = () => {
+let mostrar_todos =()=>{
     let elementos = document.getElementsByClassName('produto');
     for(let i=0; i<elementos.length; i++) {
         elementos[i].style = "display:inline-block";
